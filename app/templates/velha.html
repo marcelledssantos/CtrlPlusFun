@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/velha.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo da Velha</h1>
+ <div id="message" class="message"></div>
+    <div class="board" id="board">
+      {% for i in range(3) %}
+        <div class="row">
+          {% for j in range(3) %}
+            <div class="cell" data-row="{{ i }}" data-col="{{ j }}"></div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    
+    <div id="thinking" class="thinking" style="display: none;">🤖💭 CtrlBot está pensando...</div>
+
+    <div class="buttons">
+      <a href="/" class="btn">Voltar</a>
+      <button onclick="restartGame()" class="btn">Recomeçar</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/velha.js') }}"></script>
+</body>
+</html>
