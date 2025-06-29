@@ -1,15 +1,16 @@
+const container = document.querySelector(".container");
+
+const todasPalavras = JSON.parse(container.dataset.todasPalavras);
+const palavra = container.dataset.palavra;
+const dicas = JSON.parse(container.dataset.dicas);
+const palavraSelecionada = palavra.toUpperCase();
+
 const letrasContainer = document.getElementById("letras");
 const palavraContainer = document.getElementById("palavra");
 const errosContainer = document.getElementById("erros");
 const dicaInicialContainer = document.getElementById("dica-inicial");
 const maisDicaBtn = document.getElementById("pedir-dica");
 const maisDicaContainer = document.getElementById("mais-dica");
-const container = document.querySelector(".container");
-
-const palavra = container.dataset.palavra;
-const dicas = JSON.parse(container.dataset.dicas);
-
-const palavraSelecionada = palavra.toUpperCase();
 
 let letrasErradas = [];
 let letrasCertas = [];
@@ -20,7 +21,6 @@ dicaInicialContainer.textContent = dicas[0] || "Nenhuma dica disponível.";
 
 function mostrarPalavra() {
   palavraContainer.innerHTML = "";
-
   for (let letra of palavraSelecionada) {
     const span = document.createElement("span");
     span.classList.add("letra");
@@ -74,9 +74,7 @@ function verificarLetra(letra, btn) {
   } else {
     letrasErradas.push(letra);
     tentativas--;
-    errosContainer.textContent = `Erros: ${letrasErradas.join(
-      ", "
-    )} (${tentativas} tentativas restantes)`;
+    errosContainer.textContent = `Erros: ${letrasErradas.join(", ")} (${tentativas} tentativas restantes)`;
   }
 
   mostrarPalavra();
@@ -84,9 +82,7 @@ function verificarLetra(letra, btn) {
 }
 
 function checarFimDeJogo() {
-  const palavraRevelada = [...palavraSelecionada].every(
-    (l) => l === " " || letrasCertas.includes(l)
-  );
+  const palavraRevelada = [...palavraSelecionada].every(l => l === " " || letrasCertas.includes(l));
 
   if (palavraRevelada) {
     errosContainer.textContent = "🎉 Parabéns! Você acertou!";
@@ -98,9 +94,7 @@ function checarFimDeJogo() {
 }
 
 function desativarTeclado() {
-  document
-    .querySelectorAll(".btn-letra")
-    .forEach((btn) => (btn.disabled = true));
+  document.querySelectorAll(".btn-letra").forEach(btn => btn.disabled = true);
   maisDicaBtn.style.opacity = "0.5";
   maisDicaBtn.style.cursor = "not-allowed";
   maisDicaBtn.removeEventListener("click", mostrarMaisDica);
@@ -113,21 +107,31 @@ function mostrarMaisDica() {
     if (dicaAtual === dicas.length) {
       maisDicaBtn.style.opacity = "0.5";
       maisDicaBtn.style.cursor = "not-allowed";
+      maisDicaBtn.title = "Dicas esgotadas";
     }
   }
 }
 
 mostrarPalavra();
 criarTeclado();
-maisDicaBtn.addEventListener("click", () => {
-  if (dicaAtual < dicas.length) {
-    maisDicaContainer.textContent = dicas[dicaAtual];
-    dicaAtual++;
+maisDicaBtn.addEventListener("click", mostrarMaisDica);
 
-    if (dicaAtual === dicas.length) {
-      maisDicaBtn.style.opacity = "0.5";
-      maisDicaBtn.style.cursor = "not-allowed";
-      maisDicaBtn.title = "Dicas esgotadas";
-    }
+document.getElementById("btn-recomecar").addEventListener("click", () => {
+  let usadas = JSON.parse(localStorage.getItem("palavrasUsadas")) || [];
+  const restantes = todasPalavras.filter(p => !usadas.includes(p.palavra));
+
+  if (restantes.length === 0) {
+    alert("Você já jogou com todas as palavras! Reiniciando...");
+    localStorage.removeItem("palavrasUsadas");
+    location.reload();
+    return;
   }
+
+  const nova = restantes[Math.floor(Math.random() * restantes.length)];
+  usadas.push(nova.palavra);
+  localStorage.setItem("palavrasUsadas", JSON.stringify(usadas));
+
+  const params = new URLSearchParams();
+  params.set("palavra", nova.palavra);
+  window.location.href = "/forca?palavra=" + encodeURIComponent(nova.palavra);
 });
