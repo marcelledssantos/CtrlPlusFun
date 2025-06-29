@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/memoria.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Jogo da Memória</h1>
+
+        <div class="info-jogo">
+            <div id="cronometro" style="display: none;">⏱️ 03:00</div>
+
+            <div id="regras" class="card-regras">
+                <h3>📄 Regras</h3>
+                <ul>
+                    <li>Você tem <strong>3 minutos</strong> para encontrar todos os pares.</li>
+                    <li>Após clicar em "Começar", as cartas serão reveladas por <strong>10 segundos</strong>.</li>
+                    <li>Encontre todos os pares para vencer!</li>
+                    <li>Boa sorte! 🍀</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tabuleiro" class="tabuleiro"></div>
+        <div id="mensagem" class="resultado"></div>
+
+        <div class="buttons">
+            <button id="comecar" class="btn destaque">🎯 Começar o desafio!</button>
+            <a href="/" class="btn">Voltar</a>
+            <button onclick="window.location.reload()" class="btn">Recomeçar</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/memoria.js') }}"></script>
+</body>
+
+</html>
