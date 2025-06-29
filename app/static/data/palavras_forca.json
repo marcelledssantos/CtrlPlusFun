@@ -1,0 +1,47 @@
+[
+  {
+    "palavra": "banana",
+    "categoria": "fruta tropical amarela",
+    "dicas": [
+      "Tem casca que se descasca",
+      "É rica em potássio",
+      "Macacos adoram"
+    ]
+  },
+  {
+    "palavra": "computador",
+    "categoria": "dispositivo eletrônico usado para processar dados",
+    "dicas": [
+      "É usado para programar",
+      "Tem teclado e tela",
+      "Precisa ser ligado na tomada (ou ter bateria)"
+    ]
+  },
+  {
+    "palavra": "violão",
+    "categoria": "instrumento musical de cordas",
+    "dicas": [
+      "Muito usado em rodas de música",
+      "Tem trastes e cordas",
+      "Pode ser acústico ou elétrico"
+    ]
+  },
+  {
+    "palavra": "pirâmide",
+    "categoria": "estrutura monumental do Egito antigo",
+    "dicas": [
+      "Tem formato triangular",
+      "Feita com pedras enormes",
+      "Faraós eram enterrados nela"
+    ]
+  },
+  {
+    "palavra": "arco-íris",
+    "categoria": "fenômeno óptico e meteorológico",
+    "dicas": [
+      "Aparece após a chuva",
+      "Tem várias cores",
+      "Forma um semicírculo no céu"
+    ]
+  }
+]
