@@ -66,6 +66,7 @@ h1 {
 
 .message {
   font-size: 1.4em;
+  min-height: 1.6em;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 20px;

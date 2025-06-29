@@ -49,7 +49,6 @@ function restartGame() {
     });
     message.textContent = '';
     message.className = 'message';
-    thinking.style.display = 'none';
     enableBoard();
 }
 
@@ -84,7 +83,6 @@ function randomMove() {
 }
 
 function computerMove() {
-    thinking.style.display = 'block';
     setTimeout(() => {
         const [r, c] = findBestMove();
         board[r][c] = 'O';
@@ -108,7 +106,6 @@ function computerMove() {
         } else {
             enableBoard();
         }
-        thinking.style.display = 'none';
     }, 700);
 }
 
