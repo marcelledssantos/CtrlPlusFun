@@ -1,14 +1,12 @@
 const letrasContainer = document.getElementById("letras");
 const palavraContainer = document.getElementById("palavra");
 const errosContainer = document.getElementById("erros");
-const categoriaContainer = document.getElementById("categoria");
 const dicaInicialContainer = document.getElementById("dica-inicial");
 const maisDicaBtn = document.getElementById("pedir-dica");
 const maisDicaContainer = document.getElementById("mais-dica");
-const container = document.querySelector('.container');
+const container = document.querySelector(".container");
 
 const palavra = container.dataset.palavra;
-const categoria = container.dataset.categoria;
 const dicas = JSON.parse(container.dataset.dicas);
 
 const palavraSelecionada = palavra.toUpperCase();
@@ -17,6 +15,8 @@ let letrasErradas = [];
 let letrasCertas = [];
 let tentativas = 6;
 let dicaAtual = 1;
+
+dicaInicialContainer.textContent = dicas[0] || "Nenhuma dica disponível.";
 
 function mostrarPalavra() {
   palavraContainer.innerHTML = "";
@@ -39,15 +39,31 @@ function mostrarPalavra() {
 }
 
 function criarTeclado() {
-  const A_Z = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  letrasContainer.innerHTML = "";
 
-  for (let letra of A_Z) {
+  const linha1 = document.createElement("div");
+  const linha2 = document.createElement("div");
+
+  linha1.classList.add("linha-teclado");
+  linha2.classList.add("linha-teclado");
+
+  for (let i = 0; i < letras.length; i++) {
+    const letra = letras[i];
     const btn = document.createElement("button");
     btn.classList.add("btn-letra");
     btn.textContent = letra;
     btn.addEventListener("click", () => verificarLetra(letra, btn));
-    letrasContainer.appendChild(btn);
+
+    if (i < 13) {
+      linha1.appendChild(btn);
+    } else {
+      linha2.appendChild(btn);
+    }
   }
+
+  letrasContainer.appendChild(linha1);
+  letrasContainer.appendChild(linha2);
 }
 
 function verificarLetra(letra, btn) {
@@ -58,7 +74,9 @@ function verificarLetra(letra, btn) {
   } else {
     letrasErradas.push(letra);
     tentativas--;
-    errosContainer.textContent = `Erros: ${letrasErradas.join(", ")} (${tentativas} tentativas restantes)`;
+    errosContainer.textContent = `Erros: ${letrasErradas.join(
+      ", "
+    )} (${tentativas} tentativas restantes)`;
   }
 
   mostrarPalavra();
@@ -66,7 +84,9 @@ function verificarLetra(letra, btn) {
 }
 
 function checarFimDeJogo() {
-  const palavraRevelada = [...palavraSelecionada].every(l => l === " " || letrasCertas.includes(l));
+  const palavraRevelada = [...palavraSelecionada].every(
+    (l) => l === " " || letrasCertas.includes(l)
+  );
 
   if (palavraRevelada) {
     errosContainer.textContent = "🎉 Parabéns! Você acertou!";
@@ -78,23 +98,36 @@ function checarFimDeJogo() {
 }
 
 function desativarTeclado() {
-  document.querySelectorAll(".btn-letra").forEach(btn => btn.disabled = true);
-  maisDicaBtn.disabled = true;
+  document
+    .querySelectorAll(".btn-letra")
+    .forEach((btn) => (btn.disabled = true));
+  maisDicaBtn.style.opacity = "0.5";
+  maisDicaBtn.style.cursor = "not-allowed";
+  maisDicaBtn.removeEventListener("click", mostrarMaisDica);
 }
 
-categoriaContainer.textContent = `Categoria: ${categoria}`;
-dicaInicialContainer.textContent = `Dica: ${dicas[0] || "Nenhuma dica disponível."}`;
-
-mostrarPalavra();
-criarTeclado();
-
-maisDicaBtn.addEventListener("click", () => {
+function mostrarMaisDica() {
   if (dicaAtual < dicas.length) {
     maisDicaContainer.textContent = dicas[dicaAtual];
     dicaAtual++;
     if (dicaAtual === dicas.length) {
-      maisDicaBtn.disabled = true;
-      maisDicaBtn.textContent = "💡 Dicas esgotadas";
+      maisDicaBtn.style.opacity = "0.5";
+      maisDicaBtn.style.cursor = "not-allowed";
+    }
+  }
+}
+
+mostrarPalavra();
+criarTeclado();
+maisDicaBtn.addEventListener("click", () => {
+  if (dicaAtual < dicas.length) {
+    maisDicaContainer.textContent = dicas[dicaAtual];
+    dicaAtual++;
+
+    if (dicaAtual === dicas.length) {
+      maisDicaBtn.style.opacity = "0.5";
+      maisDicaBtn.style.cursor = "not-allowed";
+      maisDicaBtn.title = "Dicas esgotadas";
     }
   }
 });

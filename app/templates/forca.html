@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Jogo da Forca</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/forca.css') }}">
+    <meta charset="UTF-8">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forca.css') }}">
 </head>
+
 <body>
- <div 
-  class="container"
-  data-palavra="{{ palavra }}"
-  data-categoria="{{ categoria }}"
-  data-dicas='{{ dicas|tojson }}'
->
-    <h1>Jogo da Forca</h1>
-    <div id="categoria" class="categoria"></div>
-    <div id="dica-inicial" class="dica"></div>
+    <div class="container" data-palavra="{{ palavra }}" data-dicas='{{ dicas|tojson }}'>
 
-    <div id="palavra" class="palavra"></div>
+        <h1>Jogo da Forca</h1>
 
-    <div class="letras" id="letras"></div>
+        <div class="container-centralizada">
 
-    <div class="erros" id="erros"></div>
+            <div id="dica-inicial" class="dica"></div>
 
-    <div class="dicas-extra">
-      <button id="pedir-dica" class="btn">💡 Pedir mais dica</button>
-      <div id="mais-dica" class="dica-extra"></div>
+            <div id="palavra" class="palavra"></div>
+
+
+            <div class="letras" id="letras"></div>
+
+            <div class="input-group dica-group">
+                <span class="input-group-text dica-botao" id="pedir-dica" title="Clique para ver a dica">💡</span>
+                <div id="mais-dica" class="form-control dica-conteudo">Clique para receber uma dica extra</div>
+            </div>
+
+            <div class="erros" id="erros"></div>
+
+            <div class="buttons">
+                <a href="/" class="btn">Voltar</a>
+                <button onclick="location.reload()" class="btn">Recomeçar</button>
+            </div>
+
+        </div>
     </div>
 
-    <div class="buttons">
-      <a href="/" class="btn">Voltar</a>
-      <button onclick="location.reload()" class="btn">Recomeçar</button>
-    </div>
-  </div>
-
-  <script src="{{ url_for('static', filename='js/forca.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/forca.js') }}"></script>
 </body>
+
 </html>
