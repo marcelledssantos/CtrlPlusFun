@@ -1,9 +1,14 @@
+function removerAcentos(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 const container = document.querySelector(".container");
 
 const todasPalavras = JSON.parse(container.dataset.todasPalavras);
 const palavra = container.dataset.palavra;
 const dicas = JSON.parse(container.dataset.dicas);
 const palavraSelecionada = palavra.toUpperCase();
+const palavraSemAcento = removerAcentos(palavraSelecionada);
 
 const letrasContainer = document.getElementById("letras");
 const palavraContainer = document.getElementById("palavra");
@@ -21,13 +26,16 @@ dicaInicialContainer.textContent = dicas[0] || "Nenhuma dica disponível.";
 
 function mostrarPalavra() {
   palavraContainer.innerHTML = "";
-  for (let letra of palavraSelecionada) {
+  for (let i = 0; i < palavraSelecionada.length; i++) {
+    const letraOriginal = palavraSelecionada[i];
+    const letraComparada = palavraSemAcento[i];
+
     const span = document.createElement("span");
     span.classList.add("letra");
 
-    if (letrasCertas.includes(letra)) {
-      span.textContent = letra;
-    } else if (letra === " ") {
+    if (letrasCertas.includes(letraComparada)) {
+      span.textContent = letraOriginal;
+    } else if (letraOriginal === " ") {
       span.textContent = " ";
       span.classList.add("espaco");
     } else {
@@ -55,11 +63,7 @@ function criarTeclado() {
     btn.textContent = letra;
     btn.addEventListener("click", () => verificarLetra(letra, btn));
 
-    if (i < 13) {
-      linha1.appendChild(btn);
-    } else {
-      linha2.appendChild(btn);
-    }
+    (i < 13 ? linha1 : linha2).appendChild(btn);
   }
 
   letrasContainer.appendChild(linha1);
@@ -69,7 +73,7 @@ function criarTeclado() {
 function verificarLetra(letra, btn) {
   btn.disabled = true;
 
-  if (palavraSelecionada.includes(letra)) {
+  if (palavraSemAcento.includes(letra)) {
     letrasCertas.push(letra);
   } else {
     letrasErradas.push(letra);
@@ -82,9 +86,11 @@ function verificarLetra(letra, btn) {
 }
 
 function checarFimDeJogo() {
-  const palavraRevelada = [...palavraSelecionada].every(l => l === " " || letrasCertas.includes(l));
+  const revelada = palavraSemAcento
+    .split("")
+    .every((l, i) => l === " " || letrasCertas.includes(l) || palavraSelecionada[i] === " ");
 
-  if (palavraRevelada) {
+  if (revelada) {
     errosContainer.textContent = "🎉 Parabéns! Você acertou!";
     desativarTeclado();
   } else if (tentativas <= 0) {
