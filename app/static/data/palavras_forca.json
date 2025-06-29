@@ -1,47 +1,902 @@
 [
   {
-    "palavra": "banana",
-    "categoria": "fruta tropical amarela",
+    "palavra": "arara",
+    "categoria": "animal",
     "dicas": [
-      "Tem casca que se descasca",
-      "É rica em potássio",
-      "Macacos adoram"
+      "Ave colorida",
+      "Muito comum na Amazônia",
+      "Grita alto"
     ]
   },
   {
-    "palavra": "computador",
-    "categoria": "dispositivo eletrônico usado para processar dados",
+    "palavra": "jabuti",
+    "categoria": "animal",
     "dicas": [
-      "É usado para programar",
-      "Tem teclado e tela",
-      "Precisa ser ligado na tomada (ou ter bateria)"
+      "Réptil de casco",
+      "Anda devagar",
+      "Vive muitos anos"
+    ]
+  },
+  {
+    "palavra": "tamarindo",
+    "categoria": "fruta",
+    "dicas": [
+      "Sabor ácido",
+      "Marrom por fora",
+      "Muito usado em doces"
+    ]
+  },
+  {
+    "palavra": "caju",
+    "categoria": "fruta",
+    "dicas": [
+      "Tem castanha",
+      "Amarelo ou vermelho",
+      "Típico do Nordeste"
+    ]
+  },
+  {
+    "palavra": "feijoada",
+    "categoria": "comida",
+    "dicas": [
+      "Prato típico brasileiro",
+      "Tem feijão preto",
+      "Vai com arroz e couve"
+    ]
+  },
+  {
+    "palavra": "berimbau",
+    "categoria": "objeto",
+    "dicas": [
+      "Instrumento de capoeira",
+      "Tem uma corda só",
+      "Feito com cabaça"
+    ]
+  },
+  {
+    "palavra": "cuia",
+    "categoria": "objeto",
+    "dicas": [
+      "Usada no chimarrão",
+      "Feita com porongo",
+      "Muito comum no Sul"
     ]
   },
   {
     "palavra": "violão",
-    "categoria": "instrumento musical de cordas",
+    "categoria": "objeto",
     "dicas": [
-      "Muito usado em rodas de música",
-      "Tem trastes e cordas",
-      "Pode ser acústico ou elétrico"
+      "Tem cordas",
+      "Usado em rodas de samba",
+      "Típico da música brasileira"
     ]
   },
   {
-    "palavra": "pirâmide",
-    "categoria": "estrutura monumental do Egito antigo",
+    "palavra": "fivela",
+    "categoria": "objeto",
     "dicas": [
-      "Tem formato triangular",
-      "Feita com pedras enormes",
-      "Faraós eram enterrados nela"
+      "Usada em cintos",
+      "Fixa e ajusta",
+      "Pode ser decorada"
     ]
   },
   {
-    "palavra": "arco-íris",
-    "categoria": "fenômeno óptico e meteorológico",
+    "palavra": "rede",
+    "categoria": "objeto",
     "dicas": [
-      "Aparece após a chuva",
-      "Tem várias cores",
-      "Forma um semicírculo no céu"
+      "Para deitar",
+      "Muito usada no Norte e Nordeste",
+      "Pendura-se em ganchos"
+    ]
+  },
+  {
+    "palavra": "goiaba",
+    "categoria": "fruta",
+    "dicas": [
+      "Pode ser branca ou vermelha",
+      "Tem muitas sementes",
+      "Vai bem com queijo"
+    ]
+  },
+  {
+    "palavra": "pamonha",
+    "categoria": "comida",
+    "dicas": [
+      "Feita de milho",
+      "Enrolada na palha",
+      "Muito comum em festas juninas"
+    ]
+  },
+  {
+    "palavra": "pipoca",
+    "categoria": "comida",
+    "dicas": [
+      "Estoura no calor",
+      "Feita de milho",
+      "Companheira do cinema"
+    ]
+  },
+  {
+    "palavra": "mate",
+    "categoria": "bebida",
+    "dicas": [
+      "Feito com erva",
+      "Tomado quente ou gelado",
+      "Muito comum no Sul"
+    ]
+  },
+  {
+    "palavra": "capivara",
+    "categoria": "animal",
+    "dicas": [
+      "Maior roedor do mundo",
+      "Nada muito bem",
+      "Comum em parques"
+    ]
+  },
+  {
+    "palavra": "onça",
+    "categoria": "animal",
+    "dicas": [
+      "Felino brasileiro",
+      "Tem pintas",
+      "Vive no Pantanal"
+    ]
+  },
+  {
+    "palavra": "tucano",
+    "categoria": "animal",
+    "dicas": [
+      "Tem bico grande",
+      "Ave da floresta",
+      "Muito colorido"
+    ]
+  },
+  {
+    "palavra": "bule",
+    "categoria": "objeto",
+    "dicas": [
+      "Serve café ou chá",
+      "Tem bico",
+      "Feito de metal ou porcelana"
+    ]
+  },
+  {
+    "palavra": "vassoura",
+    "categoria": "objeto",
+    "dicas": [
+      "Serve para varrer",
+      "Tem cerdas",
+      "Usada diariamente"
+    ]
+  },
+  {
+    "palavra": "tapioca",
+    "categoria": "comida",
+    "dicas": [
+      "Feita de mandioca",
+      "Branca e macia",
+      "Recheada com doce ou salgado"
+    ]
+  },
+  {
+    "palavra": "mandioca",
+    "categoria": "raiz",
+    "dicas": [
+      "Raiz comestível",
+      "Faz tapioca e farinha",
+      "Muito cultivada no Brasil"
+    ]
+  },
+  {
+    "palavra": "manga",
+    "categoria": "fruta",
+    "dicas": [
+      "Amarela e doce",
+      "Pode ser fibrosa",
+      "Muito suculenta"
+    ]
+  },
+  {
+    "palavra": "abacaxi",
+    "categoria": "fruta",
+    "dicas": [
+      "Tem coroa",
+      "Muito ácido",
+      "Casca espinhosa"
+    ]
+  },
+  {
+    "palavra": "brasilia",
+    "categoria": "cidade",
+    "dicas": [
+      "Capital do Brasil",
+      "Projetada por Oscar Niemeyer",
+      "Tem formato de avião"
+    ]
+  },
+  {
+    "palavra": "recife",
+    "categoria": "cidade",
+    "dicas": [
+      "Tem o Marco Zero",
+      "Cortada por rios",
+      "Fica em Pernambuco"
+    ]
+  },
+  {
+    "palavra": "salvador",
+    "categoria": "cidade",
+    "dicas": [
+      "Tem o Pelourinho",
+      "Primeira capital do Brasil",
+      "Cidade da Bahia"
+    ]
+  },
+  {
+    "palavra": "gramado",
+    "categoria": "cidade",
+    "dicas": [
+      "Na serra gaúcha",
+      "Famosa pelo Natal Luz",
+      "Destino turístico de inverno"
+    ]
+  },
+  {
+    "palavra": "manaus",
+    "categoria": "cidade",
+    "dicas": [
+      "Porta da Amazônia",
+      "Tem teatro famoso",
+      "Rio Negro passa por ela"
+    ]
+  },
+  {
+    "palavra": "canoa",
+    "categoria": "objeto",
+    "dicas": [
+      "Flutua na água",
+      "Usada para remar",
+      "Feita de madeira ou fibra"
+    ]
+  },
+  {
+    "palavra": "curau",
+    "categoria": "comida",
+    "dicas": [
+      "Doce de milho",
+      "Servido com canela",
+      "Bem cremoso"
+    ]
+  },
+  {
+    "palavra": "acerola",
+    "categoria": "fruta",
+    "dicas": [
+      "Pequena e vermelha",
+      "Rica em vitamina C",
+      "Ácida"
+    ]
+  },
+  {
+    "palavra": "pitanga",
+    "categoria": "fruta",
+    "dicas": [
+      "Fruta pequena",
+      "Sabor agridoce",
+      "Muito comum no Brasil"
+    ]
+  },
+  {
+    "palavra": "jaca",
+    "categoria": "fruta",
+    "dicas": [
+      "Muito grande",
+      "Cheiro forte",
+      "Tem gomos doces"
+    ]
+  },
+  {
+    "palavra": "urubu",
+    "categoria": "animal",
+    "dicas": [
+      "Ave preta",
+      "Come carniça",
+      "Plana nos céus"
+    ]
+  },
+  {
+    "palavra": "siri",
+    "categoria": "animal",
+    "dicas": [
+      "Tem garras",
+      "Anda de lado",
+      "Vive no mar"
+    ]
+  },
+  {
+    "palavra": "jacaré",
+    "categoria": "animal",
+    "dicas": [
+      "Tem dentes afiados",
+      "Vive em rios",
+      "Muito temido"
+    ]
+  },
+  {
+    "palavra": "tecnologia",
+    "categoria": "conceito",
+    "dicas": [
+      "Evolui rápido",
+      "Presente em tudo",
+      "Conecta pessoas"
+    ]
+  },
+  {
+    "palavra": "celular",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Está no bolso",
+      "Serve para ligar",
+      "Tira fotos"
+    ]
+  },
+  {
+    "palavra": "internet",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Rede global",
+      "Permite navegar",
+      "Conecta dispositivos"
+    ]
+  },
+  {
+    "palavra": "mouse",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Usado no computador",
+      "Tem botões",
+      "Controla o cursor"
+    ]
+  },
+  {
+    "palavra": "notebook",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Computador portátil",
+      "Tem tela e teclado",
+      "Pode ser dobrado"
+    ]
+  },
+  {
+    "palavra": "teclado",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Tem letras e números",
+      "Digita-se com ele",
+      "Conectado ao PC"
+    ]
+  },
+  {
+    "palavra": "wi-fi",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Conexão sem fio",
+      "Precisa de senha",
+      "Distribui internet"
+    ]
+  },
+  {
+    "palavra": "pendrive",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Armazena dados",
+      "Pequeno e portátil",
+      "Encaixa via USB"
+    ]
+  },
+  {
+    "palavra": "monitor",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Exibe imagem",
+      "Conectado ao PC",
+      "Pode ser LED"
+    ]
+  },
+  {
+    "palavra": "cajá",
+    "categoria": "fruta",
+    "dicas": [
+      "Ácida",
+      "Muito usada em sucos",
+      "Amarela"
+    ]
+  },
+  {
+    "palavra": "umbu",
+    "categoria": "fruta",
+    "dicas": [
+      "Pequena e verde",
+      "Doce e azeda",
+      "Do sertão"
+    ]
+  },
+  {
+    "palavra": "arara",
+    "categoria": "animal",
+    "dicas": [
+      "Ave colorida",
+      "Muito comum na Amazônia",
+      "Grita alto"
+    ]
+  },
+  {
+    "palavra": "jabuti",
+    "categoria": "animal",
+    "dicas": [
+      "Réptil de casco",
+      "Anda devagar",
+      "Vive muitos anos"
+    ]
+  },
+  {
+    "palavra": "tamarindo",
+    "categoria": "fruta",
+    "dicas": [
+      "Sabor ácido",
+      "Marrom por fora",
+      "Muito usado em doces"
+    ]
+  },
+  {
+    "palavra": "caju",
+    "categoria": "fruta",
+    "dicas": [
+      "Tem castanha",
+      "Amarelo ou vermelho",
+      "Típico do Nordeste"
+    ]
+  },
+  {
+    "palavra": "feijoada",
+    "categoria": "comida",
+    "dicas": [
+      "Prato típico brasileiro",
+      "Tem feijão preto",
+      "Vai com arroz e couve"
+    ]
+  },
+  {
+    "palavra": "berimbau",
+    "categoria": "objeto",
+    "dicas": [
+      "Instrumento de capoeira",
+      "Tem uma corda só",
+      "Feito com cabaça"
+    ]
+  },
+  {
+    "palavra": "cuia",
+    "categoria": "objeto",
+    "dicas": [
+      "Usada no chimarrão",
+      "Feita com porongo",
+      "Muito comum no Sul"
+    ]
+  },
+  {
+    "palavra": "violão",
+    "categoria": "objeto",
+    "dicas": [
+      "Tem cordas",
+      "Usado em rodas de samba",
+      "Típico da música brasileira"
+    ]
+  },
+  {
+    "palavra": "fivela",
+    "categoria": "objeto",
+    "dicas": [
+      "Usada em cintos",
+      "Fixa e ajusta",
+      "Pode ser decorada"
+    ]
+  },
+  {
+    "palavra": "rede",
+    "categoria": "objeto",
+    "dicas": [
+      "Para deitar",
+      "Muito usada no Norte e Nordeste",
+      "Pendura-se em ganchos"
+    ]
+  },
+  {
+    "palavra": "goiaba",
+    "categoria": "fruta",
+    "dicas": [
+      "Pode ser branca ou vermelha",
+      "Tem muitas sementes",
+      "Vai bem com queijo"
+    ]
+  },
+  {
+    "palavra": "pamonha",
+    "categoria": "comida",
+    "dicas": [
+      "Feita de milho",
+      "Enrolada na palha",
+      "Muito comum em festas juninas"
+    ]
+  },
+  {
+    "palavra": "pipoca",
+    "categoria": "comida",
+    "dicas": [
+      "Estoura no calor",
+      "Feita de milho",
+      "Companheira do cinema"
+    ]
+  },
+  {
+    "palavra": "mate",
+    "categoria": "bebida",
+    "dicas": [
+      "Feito com erva",
+      "Tomado quente ou gelado",
+      "Muito comum no Sul"
+    ]
+  },
+  {
+    "palavra": "capivara",
+    "categoria": "animal",
+    "dicas": [
+      "Maior roedor do mundo",
+      "Nada muito bem",
+      "Comum em parques"
+    ]
+  },
+  {
+    "palavra": "onça",
+    "categoria": "animal",
+    "dicas": [
+      "Felino brasileiro",
+      "Tem pintas",
+      "Vive no Pantanal"
+    ]
+  },
+  {
+    "palavra": "tucano",
+    "categoria": "animal",
+    "dicas": [
+      "Tem bico grande",
+      "Ave da floresta",
+      "Muito colorido"
+    ]
+  },
+  {
+    "palavra": "bule",
+    "categoria": "objeto",
+    "dicas": [
+      "Serve café ou chá",
+      "Tem bico",
+      "Feito de metal ou porcelana"
+    ]
+  },
+  {
+    "palavra": "vassoura",
+    "categoria": "objeto",
+    "dicas": [
+      "Serve para varrer",
+      "Tem cerdas",
+      "Usada diariamente"
+    ]
+  },
+  {
+    "palavra": "tapioca",
+    "categoria": "comida",
+    "dicas": [
+      "Feita de mandioca",
+      "Branca e macia",
+      "Recheada com doce ou salgado"
+    ]
+  },
+  {
+    "palavra": "mandioca",
+    "categoria": "raiz",
+    "dicas": [
+      "Raiz comestível",
+      "Faz tapioca e farinha",
+      "Muito cultivada no Brasil"
+    ]
+  },
+  {
+    "palavra": "manga",
+    "categoria": "fruta",
+    "dicas": [
+      "Amarela e doce",
+      "Pode ser fibrosa",
+      "Muito suculenta"
+    ]
+  },
+  {
+    "palavra": "abacaxi",
+    "categoria": "fruta",
+    "dicas": [
+      "Tem coroa",
+      "Muito ácido",
+      "Casca espinhosa"
+    ]
+  },
+  {
+    "palavra": "brasilia",
+    "categoria": "cidade",
+    "dicas": [
+      "Capital do Brasil",
+      "Projetada por Oscar Niemeyer",
+      "Tem formato de avião"
+    ]
+  },
+  {
+    "palavra": "recife",
+    "categoria": "cidade",
+    "dicas": [
+      "Tem o Marco Zero",
+      "Cortada por rios",
+      "Fica em Pernambuco"
+    ]
+  },
+  {
+    "palavra": "salvador",
+    "categoria": "cidade",
+    "dicas": [
+      "Tem o Pelourinho",
+      "Primeira capital do Brasil",
+      "Cidade da Bahia"
+    ]
+  },
+  {
+    "palavra": "gramado",
+    "categoria": "cidade",
+    "dicas": [
+      "Na serra gaúcha",
+      "Famosa pelo Natal Luz",
+      "Destino turístico de inverno"
+    ]
+  },
+  {
+    "palavra": "manaus",
+    "categoria": "cidade",
+    "dicas": [
+      "Porta da Amazônia",
+      "Tem teatro famoso",
+      "Rio Negro passa por ela"
+    ]
+  },
+  {
+    "palavra": "canoa",
+    "categoria": "objeto",
+    "dicas": [
+      "Flutua na água",
+      "Usada para remar",
+      "Feita de madeira ou fibra"
+    ]
+  },
+  {
+    "palavra": "curau",
+    "categoria": "comida",
+    "dicas": [
+      "Doce de milho",
+      "Servido com canela",
+      "Bem cremoso"
+    ]
+  },
+  {
+    "palavra": "acerola",
+    "categoria": "fruta",
+    "dicas": [
+      "Pequena e vermelha",
+      "Rica em vitamina C",
+      "Ácida"
+    ]
+  },
+  {
+    "palavra": "pitanga",
+    "categoria": "fruta",
+    "dicas": [
+      "Fruta pequena",
+      "Sabor agridoce",
+      "Muito comum no Brasil"
+    ]
+  },
+  {
+    "palavra": "jaca",
+    "categoria": "fruta",
+    "dicas": [
+      "Muito grande",
+      "Cheiro forte",
+      "Tem gomos doces"
+    ]
+  },
+  {
+    "palavra": "urubu",
+    "categoria": "animal",
+    "dicas": [
+      "Ave preta",
+      "Come carniça",
+      "Plana nos céus"
+    ]
+  },
+  {
+    "palavra": "siri",
+    "categoria": "animal",
+    "dicas": [
+      "Tem garras",
+      "Anda de lado",
+      "Vive no mar"
+    ]
+  },
+  {
+    "palavra": "jacaré",
+    "categoria": "animal",
+    "dicas": [
+      "Tem dentes afiados",
+      "Vive em rios",
+      "Muito temido"
+    ]
+  },
+  {
+    "palavra": "tecnologia",
+    "categoria": "conceito",
+    "dicas": [
+      "Evolui rápido",
+      "Presente em tudo",
+      "Conecta pessoas"
+    ]
+  },
+  {
+    "palavra": "celular",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Está no bolso",
+      "Serve para ligar",
+      "Tira fotos"
+    ]
+  },
+  {
+    "palavra": "internet",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Rede global",
+      "Permite navegar",
+      "Conecta dispositivos"
+    ]
+  },
+  {
+    "palavra": "mouse",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Usado no computador",
+      "Tem botões",
+      "Controla o cursor"
+    ]
+  },
+  {
+    "palavra": "notebook",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Computador portátil",
+      "Tem tela e teclado",
+      "Pode ser dobrado"
+    ]
+  },
+  {
+    "palavra": "teclado",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Tem letras e números",
+      "Digita-se com ele",
+      "Conectado ao PC"
+    ]
+  },
+  {
+    "palavra": "wi-fi",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Conexão sem fio",
+      "Precisa de senha",
+      "Distribui internet"
+    ]
+  },
+  {
+    "palavra": "pendrive",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Armazena dados",
+      "Pequeno e portátil",
+      "Encaixa via USB"
+    ]
+  },
+  {
+    "palavra": "monitor",
+    "categoria": "tecnologia",
+    "dicas": [
+      "Exibe imagem",
+      "Conectado ao PC",
+      "Pode ser LED"
+    ]
+  },
+  {
+    "palavra": "cajá",
+    "categoria": "fruta",
+    "dicas": [
+      "Ácida",
+      "Muito usada em sucos",
+      "Amarela"
+    ]
+  },
+  {
+    "palavra": "umbu",
+    "categoria": "fruta",
+    "dicas": [
+      "Pequena e verde",
+      "Doce e azeda",
+      "Do sertão"
+    ]
+  },
+  {
+    "palavra": "arara",
+    "categoria": "animal",
+    "dicas": [
+      "Ave colorida",
+      "Muito comum na Amazônia",
+      "Grita alto"
+    ]
+  },
+  {
+    "palavra": "jabuti",
+    "categoria": "animal",
+    "dicas": [
+      "Réptil de casco",
+      "Anda devagar",
+      "Vive muitos anos"
+    ]
+  },
+  {
+    "palavra": "tamarindo",
+    "categoria": "fruta",
+    "dicas": [
+      "Sabor ácido",
+      "Marrom por fora",
+      "Muito usado em doces"
+    ]
+  },
+  {
+    "palavra": "caju",
+    "categoria": "fruta",
+    "dicas": [
+      "Tem castanha",
+      "Amarelo ou vermelho",
+      "Típico do Nordeste"
+    ]
+  },
+  {
+    "palavra": "feijoada",
+    "categoria": "comida",
+    "dicas": [
+      "Prato típico brasileiro",
+      "Tem feijão preto",
+      "Vai com arroz e couve"
+    ]
+  },
+  {
+    "palavra": "berimbau",
+    "categoria": "objeto",
+    "dicas": [
+      "Instrumento de capoeira",
+      "Tem uma corda só",
+      "Feito com cabaça"
     ]
   }
 ]
