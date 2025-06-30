@@ -1,0 +1,124 @@
+body {
+    background: url('/static/images/bg-games.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.lista-palavras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.palavra-item {
+    background: #a58aff;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(12, 40px);
+    justify-content: center;
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.celula {
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.celula.selecionada {
+    background-color: lightblue;
+}
+
+.celula.encontrada {
+    background-color: lightgreen;
+}
+
+.botoes {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #b68eff;
+    border: none;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #9e6bff;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+#mensagem-vitoria {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00cc66;
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

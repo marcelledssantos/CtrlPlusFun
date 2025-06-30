@@ -3,6 +3,7 @@ from app.views.hub_view import bp_hub
 from app.views.velha_view import bp_velha
 from app.views.forca_view import bp_forca
 from app.views.memoria_view import bp_memoria
+from app.views.caca_view import bp_caca
 
 
 def create_app():
@@ -13,5 +14,6 @@ def create_app():
     app.register_blueprint(bp_velha)
     app.register_blueprint(bp_forca)
     app.register_blueprint(bp_memoria) 
+    app.register_blueprint(bp_caca)
 
     return app

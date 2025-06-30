@@ -1,5 +1,3 @@
-# app/views/hub_view.py
-
 from flask import Blueprint, render_template
 
 bp_hub = Blueprint('hub', __name__)
