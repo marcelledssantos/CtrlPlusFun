@@ -1,5 +1,10 @@
-function removerAcentos(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+if (typeof removerAcentos === 'undefined') {
+  function removerAcentos(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+}
+if (typeof require !== 'undefined') {
+  removerAcentos = require('./utils');
 }
 
 const container = document.querySelector(".container");
